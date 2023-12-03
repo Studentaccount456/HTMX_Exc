@@ -1,0 +1,46 @@
+[
+    {
+      "state": "not_logged_in",
+      "user": null,
+      "actions": [
+        { "name": "Login", "endpoint": "/login" },
+        { "name": "Register", "endpoint": "/register" },
+        { "name": "View Posts", "endpoint": "/view_posts" }
+      ]
+    },
+    {
+      "state": "logged_in",
+      "user": {
+        "id": 123,
+        "username": "john_doe"
+      },
+      "actions": [
+        { "name": "Create Post", "endpoint": "/create_post" },
+        { "name": "View Posts", "endpoint": "/view_posts" },
+        { "name": "Logout", "endpoint": "/logout" }
+      ]
+    },
+    {
+      "state": "logged_in_and_post_created",
+      "user": {
+        "id": 123,
+        "username": "john_doe"
+      },
+      "actions": [
+        { "name": "View Posts", "endpoint": "/view_posts" },
+        { "name": "Logout", "endpoint": "/logout" },
+        { "name": "Edit Post", "endpoint": "/edit_post" },
+        { "name": "Delete Post", "endpoint": "/delete_post" }
+      ]
+    },
+    {
+      "state": "not_logged_in",
+      "user": null,
+      "actions": [
+        { "name": "Login", "endpoint": "/login" },
+        { "name": "Register", "endpoint": "/register" },
+        { "name": "View Posts", "endpoint": "/view_posts" }
+      ]
+    }
+  ]
+  

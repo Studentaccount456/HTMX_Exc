@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditional JavaScript Approach</title>
+</head>
+<body>
+
+<button id="fetchButton">
+  Fetch Todo
+</button>
+
+<div id="todoContainer">
+  <!-- Data -->
+</div>
+
+<script>
+  document.getElementById('fetchButton').addEventListener('click', function() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => updateUI(json));
+  });
+
+  function updateUI(todoData) {
+    document.getElementById('todoContainer').innerHTML = `
+      <h2>Todo Details</h2>
+      <p>ID: ${todoData.id}</p>
+      <p>Title: ${todoData.title}</p>
+      <p>Completed: ${todoData.completed}</p>
+    `;
+  }
+</script>
+
+</body>
+</html>

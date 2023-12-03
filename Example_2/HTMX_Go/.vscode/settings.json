@@ -1,0 +1,12 @@
+{
+    "go.useLanguageServer": true,
+    "gopls": {
+        "usePlaceholders": true,
+        "experimentalWorkspaceModule": true
+    },
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/api",
+        "proxyUri": "http://localhost:8080"
+    }
+}

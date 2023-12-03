@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HATEOAS with htmx Example</title>
+</head>
+<body>
+    {% for action in actions %}
+        <button hx-post="{{ action.endpoint }}" hx-trigger="click">{{ action.name }}</button>
+    {% endfor %}
+    <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+</body>
+</html>
